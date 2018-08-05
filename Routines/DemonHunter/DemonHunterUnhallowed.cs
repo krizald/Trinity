@@ -85,14 +85,14 @@ namespace Trinity.Routines.DemonHunter
             if (Skills.DemonHunter.Vengeance.CanCast())
                 return Vengeance();
 
+            if (ShouldPreparation())
+                return Preparation();
+
             if (ShouldShadowPower())
                 return ShadowPower();
 
             if (ShouldSmokeScreen())
                 return SmokeScreen();
-
-            if (ShouldPreparation())
-                return Preparation();
 
             if (ShouldCompanion())
                 return Companion();
